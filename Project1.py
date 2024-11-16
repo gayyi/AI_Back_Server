@@ -1,9 +1,11 @@
 import os
 from openai import OpenAI
+#for acessing API from OpenAI
 
 # 初始化OpenAI客户端
-client = OpenAI(
-    api_key=os.getenv("DASHSCOPE_API_KEY"),
+client = OpenAI(#create a concrete OpenAi client, allowing us to 
+                #interact with OpenAI 
+    api_key=os.getenv("DASHSCOPE_API_KEY"),#using os.getenv, getting API key from environment
     base_url="https://dashscope.aliyuncs.com/compatible-mode/v1"
 )
 
